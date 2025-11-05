@@ -24,20 +24,20 @@ func (p *Person) UpdateStatus(newStatus bool) {
 }
 
 
-func main() {
-	person1 := Person{
-		FirstName: "Md",
-		LastName:  "Akash",
-		Age:       12,
-		Status:    true,
-	}
+// func main() {
+// 	person1 := Person{
+// 		FirstName: "Md",
+// 		LastName:  "Akash",
+// 		Age:       12,
+// 		Status:    true,
+// 	}
 
-	fmt.Println(person1)
+// 	fmt.Println(person1)
 
-	person2 := Person{"Atik", "Akash", 12, true}
-	person2.UpdateStatus(false)
-	fmt.Printf("Person info : %+v\n, Type : %T\n", person2 , person2)
+// 	person2 := Person{"Atik", "Akash", 12, true}
+// 	person2.UpdateStatus(false)
+// 	fmt.Printf("Person info : %+v\n, Type : %T\n", person2 , person2)
 
 
-	fmt.Println(person1.GetFullName())
-}
+// 	fmt.Println(person1.GetFullName())
+// }
