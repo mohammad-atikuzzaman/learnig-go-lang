@@ -22,12 +22,13 @@ func calculateTriangleArea(base float64, hight float64) (float64, error) {
 }
 
 
-func main(){
-	// area, error := calCulateCircleArea(10)
-	area, error := calculateTriangleArea(10, 20)
-	if(error != nil){
-		fmt.Println(error)
-	}else{
-		fmt.Println(area)
-	}
-}
+// func main(){
+// 	// area, error := calCulateCircleArea(10)
+// 	area, error := calculateTriangleArea(10, 20)
+// 	if(error != nil){
+// 		fmt.Println(error)
+// 	}else{
+// 		fmt.Println(area)
+
+// 	}
+// }
