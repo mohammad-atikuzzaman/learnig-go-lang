@@ -10,8 +10,6 @@ type Student struct {
 }
 
 func CalculateGrade(s Student) (float64, string) {
-	// fmt.Println(s)
-	// handle marks error
 	if s.Marks < 0 || s.Marks > 100 {
 		return 0, "Marks will be minimum 0 and maximum 100"
 	}
@@ -45,7 +43,8 @@ func Students() {
 	fmt.Scan(&marks)
 
 	s1 := Student{"Akash codding school", name, roll, marks}
-	CalculateGrade(s1)
+	m, g := CalculateGrade(s1)
+	fmt.Printf("Obtaign marks is: %f\n, And Grade is: %s\n", m, g)
 }
 
 func main() {
