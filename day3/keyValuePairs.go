@@ -37,10 +37,25 @@ func main() {
 	fmt.Println(map2["lemon"])
 
 	// check if key exist
-	value, exist:=map3["mango"]
+	value, exist := map3["mango"]
 	if exist {
-		fmt.Println("The number of mango: ",value)
-	}else{
+		fmt.Println("The number of mango: ", value)
+	} else {
 		fmt.Println("Mango not exist")
+	}
+
+	// delete
+	delete(map3, "banana")
+	fmt.Println(map3)
+
+	// iteration through map
+	fmt.Println("\nIterating through map:")
+	for key, value := range map3 {
+		fmt.Printf("%s: %d\n", key, value)
+	}
+	// Only keys
+	fmt.Println("\nOnly keys:")
+	for key := range map3 {
+		fmt.Println("Key:", key)
 	}
 }
