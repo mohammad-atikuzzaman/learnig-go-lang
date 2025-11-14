@@ -24,12 +24,12 @@ func declarationOfArray() {
 
 	// Arrays are value types (copied)
 	newArr := arrWay2
-	newArr[0] = 5 //copied values only works on number
+	newArr[0] = 5
 	fmt.Println(arrWay2)
 	fmt.Println(newArr)
 
 	newArr2 := arrWay4
-	newArr2[0] = "test" //copied values don't works on string
+	newArr2[0] = "test"
 	fmt.Println(arrWay4)
 	fmt.Println(newArr2)
 }

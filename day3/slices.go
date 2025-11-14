@@ -26,8 +26,24 @@ func main() {
 	numbers := []int{0, 1, 2, 3, 4, 5, 6, 7, 8, 9}
 
 	fmt.Println("Original:", numbers)
-	fmt.Println("numbers[2:5]:", numbers[2:5]) // it will start slicing from 2 and end at before 5
-	fmt.Println("numbers[:5]:", numbers[:5])   // it will start slicing from index 0 and end at before 5
-	fmt.Println("numbers[5:]:", numbers[5:])   // it will start slicing from 5 and end after last element
+	fmt.Println("numbers[2:5]:", numbers[2:5]) // it will start slicing from index 2 and end at before index 5
+	fmt.Println("numbers[:5]:", numbers[:5])   // it will start slicing from index 0 and end at before index 5
+	fmt.Println("numbers[5:]:", numbers[5:])   // it will start slicing from index 5 and end after last element
 	fmt.Println("numbers[:]:", numbers[:])     // [0 1 2 3 4 5 6 7 8 9]
+
+	// Copy slices
+	src := []int{1, 2, 3}
+	dest := make([]int, len(src))
+	copy(dest, src)
+	fmt.Println("Source:", src)
+	fmt.Println("Destination:", dest)
+
+	
+
+	// Slices are reference types
+	sliceA := []int{1, 2, 3}
+	sliceB := sliceA
+	sliceB[0] = 100
+	fmt.Println("Slice A:", sliceA) // [100 2 3] - changed!
+	fmt.Println("Slice B:", sliceB) // [100 2 3]
 }
