@@ -29,7 +29,7 @@ func processUserData(userID int) error {
 		return errors.New("invalid user ID")
 	}
 
-	// Simulate database error
+	// Simulate database erro
 	if userID == 999 {
 		return connectToDatabase()
 	}
