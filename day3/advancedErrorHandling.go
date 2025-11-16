@@ -5,6 +5,8 @@ import (
 	"fmt"
 )
 
+// I need to more study about advanced error handling. This code is just copy
+
 type DatabaseError struct {
 	Operation string
 	Message   string
