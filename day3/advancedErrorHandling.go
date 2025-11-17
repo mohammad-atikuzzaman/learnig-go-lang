@@ -6,6 +6,7 @@ import (
 )
 
 // I need to more study about advanced error handling. This code is just copy
+// I will resume learning from tomorrow
 
 type DatabaseError struct {
 	Operation string
