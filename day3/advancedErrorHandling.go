@@ -5,7 +5,6 @@ import (
 	"fmt"
 )
 
-
 type DatabaseError struct {
 	Operation string
 	Message   string
@@ -19,40 +18,37 @@ func (e *DatabaseError) Error() string {
 
 func connectToDatabase() error {
 	return &DatabaseError{
-		Operation: "connect",
+		Operation: "Connect",
 		Message:   "connection timeout",
 		Code:      1001,
 	}
 }
 
-func processUserData(userID int) error {
-	if userID <= 0 {
-		return errors.New("invalid user ID")
+func processUserData(userId int) error {
+	if userId < 0 {
+		return errors.New("Invalid user id")
 	}
-
-	// Simulate database erro
-	if userID == 999 {
+	// simulate database error
+	if userId >= 0 && userId <= 100 {
 		return connectToDatabase()
 	}
-
 	return nil
 }
 
 func main() {
-	userIDs := []int{123, -5, 999, 456}
-
-	for _, userID := range userIDs {
-		err := processUserData(userID)
+	userIds := []int{1, 4, -2, 400}
+	for _, id := range userIds {
+		err := processUserData(id)
 		if err != nil {
-			fmt.Printf("Error processing user %d: %v\n", userID, err)
+			fmt.Printf("Error processing user %d: %v\n", id, err)
+		}
 
-			// Type assertion for custom errors
-			if dbErr, ok := err.(*DatabaseError); ok {
-				fmt.Printf("Database error details - Code: %d, Operation: %s\n",
-					dbErr.Code, dbErr.Operation)
-			}
+		// Type assertion for custom errors
+		if dbErr, ok := err.(*DatabaseError); ok {
+			fmt.Printf("Database error details - Code: %d, Operation: %s\n",
+				dbErr.Code, dbErr.Operation)
 		} else {
-			fmt.Printf("Successfully processed user %d\n", userID)
+			fmt.Printf("Successfully processed user %d\n", id)
 		}
 	}
 }
