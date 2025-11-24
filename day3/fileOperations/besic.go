@@ -1,7 +1,8 @@
 package main
 
 import (
-	"fileOperations/operations"
+	// "fileOperations/operations"
+	"fileOperations/stats"
 )
 
 func main() {
@@ -9,5 +10,6 @@ func main() {
 	// operations.ReadFile()
 	// operations.ReadFileLineByLine()
 	// operations.AppendNewContentToFile()
-	operations.ReadFileLineByLine()
+	// operations.ReadFileLineByLine()
+	stats.FileIsExist()
 }
