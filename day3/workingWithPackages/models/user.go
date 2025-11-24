@@ -7,6 +7,7 @@ type User struct {
 	Name  string
 	Email string
 }
+
 func (u User) Display(){
 	 fmt.Printf("User: %s (ID: %d) - %s\n", u.Name, u.Id, u.Email)
 }
