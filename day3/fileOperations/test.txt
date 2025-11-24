@@ -2,3 +2,4 @@ Hello, World!
 Welcome to Go programming.
 This is a test file.
 This is append text content.
+This is append text content.
